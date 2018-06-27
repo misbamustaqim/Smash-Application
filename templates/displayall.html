@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1> All the data available in the database </h1>
+
+    <br>
+    <table>
+        <tr>
+            <th> Id </th>
+
+            <th> Name </th>
+
+            <th> Description </th>
+
+            <th> Power </th>
+        </tr>
+        {% for item in message %}
+
+        <tr>
+            <td>  {{ item.id }}</td>
+            <td>  {{ item.name }}</td>
+            <td>  {{ item.description }}</td>
+            <td>  {{ item.power }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>

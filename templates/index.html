@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <form method="get" action="/characters">
+
+        <h4>GET all:
+            <br>
+        <input type="submit" value="Submit"/><br></h4>
+    </form>
+
+    <form method="post" action="/put">
+        <h4>PUT method:</h4>
+         <select name="Character">
+            {% for activity in message %}
+                <option value="{{ activity.name }}">{{ activity.name }} </option>
+            {% endfor %}
+        </select>
+        <!--<input type = "text" name = "character_name">-->
+        <input type="text" name="character_info"/>
+        <input type="submit" value="Submit"/><br>
+
+    </form>
+
+
+    <br>
+
+
+    <form method = "post" action ="/post">
+        <h4>POST Method:</h4>
+        Enter the name of a character
+        &nbsp;&nbsp;
+        <input type="text" name="Name">
+        <br>
+        Enter the description Of the character
+        &nbsp;
+        <input type="text" name="character_info">
+        <br>
+        Enter the power of the character
+        &nbsp;&nbsp;
+        <input type="text" name="character_power"> <br>
+         <br>
+        <input type="submit" value="Submit"><br>
+
+    <br>
+
+    </form>
+     <form method="post" action ="/delete">
+        <h4>DELETE method:</h4>
+        <input type="text" name="character_delete">
+         <br>
+        <input type="submit" value="Submit">
+     </form>
+    </form>
+    <br>
+
+
+    <form  method="post" action ="/characters">
+        <h4>GET ONE Method:</h4>
+        <input type="text" name="char_name">
+        <br>
+         <br>
+        <input type="submit" value="Submit"><br>
+    <br>
+
+    </form>
+</body>
+</html>
